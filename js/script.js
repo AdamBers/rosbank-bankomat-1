@@ -47,8 +47,12 @@ function handleStar(event) {
     const question1 = document.getElementById('question1')
     const errorMessage = document.getElementById('error-message')
     error_2.classList.add('hidden')
+    error_3.classList.add('hidden')
     send.classList.remove('hidden')
     document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
+    comment_div.classList.add('hidden')
+    commentValue = ''
+
     currentGrade = event.target.id
     errorMessage.classList.add('hidden')
     label1.style.color = '#E5E7EA'
@@ -86,7 +90,6 @@ function handleStar(event) {
         label2.style.color = '#E40038'
         label1.style.color = '#E40038'
         question1.classList.add('hidden')
-        comment.classList.add('hidden')
         comment_div.classList.add('hidden')
     }
 }
